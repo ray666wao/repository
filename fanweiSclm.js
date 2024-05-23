@@ -3,7 +3,7 @@ var WfSclm = {};
 //生产环境
 //WfSclm.sclmUrl = "http://10.0.0.173:8081";
 //本地环境
-WfSclm.sclmUrl = "http://127.0.0.1:8081";
+WfSclm.sclmUrl = "http://192.168.101.93:8081";
 //WfSclm.sclmUrl = "http://192.168.101.150:8081";
 //WfSclm.sclmUrl = "http://rivert.v6.idcfengye.com";
 //WfSclm.sclmUrl = "http://192.168.101.200:8081";
