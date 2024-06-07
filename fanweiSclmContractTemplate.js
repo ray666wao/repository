@@ -97,7 +97,7 @@ function init(){
         let busData = eventData.busData || {};
         let status = eventData.status;
         let instanceId = eventData.instanceId;
-        debugger
+        
         let msg = eventData.msg || "数据处理失败";
         if(type=='sclmFormHeight'){
             //动态设置嵌入的表单高度
@@ -110,7 +110,7 @@ function init(){
             if(status){
                 //alert("instanceId===="+instanceId);
                 //更新设置泛微表相关字段数据
-                let formData = busData.sclmTUseSeals || {};
+                let formData = busData.sclmMContractTemplate || {};
                 if(instanceId &&  requestid=='-1'){
                     //设置值-SCLM流程实例ID
                     WfForm.changeFieldValue(sclmInstanceIdField, {value:instanceId});
