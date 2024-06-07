@@ -27,7 +27,7 @@ var techPrincipal = WfForm.convertFieldNameToId("tech_principal");
 //	技术总负责人
 var chiefTechPrincipal = WfForm.convertFieldNameToId("chief_tech_principal");
 
-console.log("SCLM流程实例ID==",WfForm.getFieldValue(sclmInstanceId_field));
+console.log("SCLM流程实例ID==",WfForm.getFieldValue(sclmInstanceIdField));
 console.log("申请公司==",WfForm.getFieldValue(sqgs));
 console.log("申请部门==",WfForm.getFieldValue(applyDept));
 
