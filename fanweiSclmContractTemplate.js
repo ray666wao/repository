@@ -23,18 +23,15 @@ var sclmInstanceIdField = WfForm.convertFieldNameToId("sclm_instance_id");
 var sqgs = WfForm.convertFieldNameToId("sqgs");
 //申请部门
 var applyDept = WfForm.convertFieldNameToId("apply_dept");
-//	技术负责人
-var techPrincipal = WfForm.convertFieldNameToId("tech_principal");
-//	技术总负责人
-var chiefTechPrincipal = WfForm.convertFieldNameToId("chief_tech_principal");
+//	会签人
+var countersigner = WfForm.convertFieldNameToId("countersigner");
 // 境内境外
 var domesticOverseas = WfForm.convertFieldNameToId("domestic_overseas");
 
 console.log("SCLM流程实例ID==",WfForm.getFieldValue(sclmInstanceIdField));
 console.log("申请公司==",WfForm.getFieldValue(sqgs));
 console.log("申请部门==",WfForm.getFieldValue(applyDept));
-console.log("技术负责人==",WfForm.getFieldValue(techPrincipal));
-console.log("技术总负责人==",WfForm.getFieldValue(chiefTechPrincipal));
+console.log("会签人==",WfForm.getFieldValue(countersigner));
 console.log("境内境外==",WfForm.getFieldValue(domesticOverseas));
 
 let callback_bk = null;
@@ -97,7 +94,7 @@ function init(){
         let busData = eventData.busData || {};
         let status = eventData.status;
         let instanceId = eventData.instanceId;
-        debugger
+        
         let msg = eventData.msg || "数据处理失败";
         if(type=='sclmFormHeight'){
             //动态设置嵌入的表单高度
@@ -115,15 +112,12 @@ function init(){
                     //设置值-SCLM流程实例ID
                     WfForm.changeFieldValue(sclmInstanceIdField, {value:instanceId});
                 }
-                
                 //设置值-申请部门
                 WfForm.changeFieldValue(applyDept, {value:getDepId(formData.applyDeptId)});
                 //设置值- 申请公司
                 WfForm.changeFieldValue(sqgs, {value:getDepId(formData.applyCompanyId)});
-                //设置值- 技术负责人
-                WfForm.changeFieldValue(techPrincipal, {value:formData.techPrincipalId});
-                //设置值- 技术负责人
-                WfForm.changeFieldValue(chiefTechPrincipal, {value:formData.chiefTechPrincipalId});
+                //设置值- 会签人
+                WfForm.changeFieldValue(countersigner, {value:formData.countersignerId});
                 //设置值- 境内境外
                 WfForm.changeFieldValue(domesticOverseas, {value:formData.domesticOverseas});
 
