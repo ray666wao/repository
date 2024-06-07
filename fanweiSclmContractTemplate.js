@@ -97,7 +97,7 @@ function init(){
         let busData = eventData.busData || {};
         let status = eventData.status;
         let instanceId = eventData.instanceId;
-        
+        debugger
         let msg = eventData.msg || "数据处理失败";
         if(type=='sclmFormHeight'){
             //动态设置嵌入的表单高度
