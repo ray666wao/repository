@@ -1,3 +1,4 @@
+// add by wxx 2024/6/6:泛微引用 start 
 //测试合同模板
 
 var commonParam = WfForm.getGlobalStore().commonParam;
@@ -26,6 +27,8 @@ var applyDept = WfForm.convertFieldNameToId("apply_dept");
 var techPrincipal = WfForm.convertFieldNameToId("tech_principal");
 //	技术总负责人
 var chiefTechPrincipal = WfForm.convertFieldNameToId("chief_tech_principal");
+// 境内境外
+var domesticOverseas = WfForm.convertFieldNameToId("domestic_overseas");
 
 console.log("SCLM流程实例ID==",WfForm.getFieldValue(sclmInstanceIdField));
 console.log("申请公司==",WfForm.getFieldValue(sqgs));
@@ -117,6 +120,8 @@ function init(){
                 WfForm.changeFieldValue(techPrincipal, {value:formData.techPrincipalId});
                 //设置值- 技术负责人
                 WfForm.changeFieldValue(chiefTechPrincipal, {value:formData.chiefTechPrincipalId});
+                //设置值- 境内境外
+                WfForm.changeFieldValue(domesticOverseas, {value:formData.domesticOverseas});
 
                 if(callback_bk){
                     //继续提交需调用callback，不调用代表阻断
@@ -130,5 +135,5 @@ function init(){
 
 }
 
-
+// add by wxx 2024/6/6:泛微引用 end
 
