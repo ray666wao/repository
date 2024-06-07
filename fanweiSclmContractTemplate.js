@@ -115,6 +115,7 @@ function init(){
                     //设置值-SCLM流程实例ID
                     WfForm.changeFieldValue(sclmInstanceIdField, {value:instanceId});
                 }
+                debugger
                 //设置值-申请部门
                 WfForm.changeFieldValue(applyDept, {value:getDepId(formData.applyDeptId)});
                 //设置值- 申请公司
