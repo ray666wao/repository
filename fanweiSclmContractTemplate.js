@@ -33,6 +33,9 @@ var domesticOverseas = WfForm.convertFieldNameToId("domestic_overseas");
 console.log("SCLM流程实例ID==",WfForm.getFieldValue(sclmInstanceIdField));
 console.log("申请公司==",WfForm.getFieldValue(sqgs));
 console.log("申请部门==",WfForm.getFieldValue(applyDept));
+console.log("技术负责人==",WfForm.getFieldValue(techPrincipal));
+console.log("技术总负责人==",WfForm.getFieldValue(chiefTechPrincipal));
+console.log("境内境外==",WfForm.getFieldValue(domesticOverseas));
 
 let callback_bk = null;
 
